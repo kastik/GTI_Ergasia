@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://code.getmdl.io/1.3.0/material.blue-orange.min.css" rel="stylesheet"/>
+    <link href="maincss.css" rel="stylesheet" type="text/css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="javascript.js" type="application/javascript"></script>
+    <title>Επικοινωνία</title>
+</head>
+<body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Επικοινωνία</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="home.html">Αρχική</a>
+            <a class="mdl-navigation__link" href="projects.html">Projects</a>
+            <a class="mdl-navigation__link" href="contact.html" style="background: #e2e2e2">Επικοινωνία</a>
+            <a class="mdl-navigation__link" href="socialProfiles.html">Κοινωνικά Προφίλ</a>
+            <a class="mdl-navigation__link" href="about.html">Σχετικά με την σελίδα</a>
+        </nav>
+    </div>
+    <div id="mobileHeader">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Επικοινωνία</span>
+            <div class="mdl-layout-spacer"></div>
+        </div>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div class="contactForm" style="margin-right: 50px;margin-left: 0">
+                <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Φόρμα επικοινωνίας</h2>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <form id="myForm">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                                 style="display: block">
+                                <input class="mdl-textfield__input" id="nameInput" type="text">
+                                <label class="mdl-textfield__label" for="nameInput">Όνομα</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                                 style="display: block">
+                                <input class="mdl-textfield__input" id="lastNameInput" type="text">
+                                <label class="mdl-textfield__label" for="lastNameInput">Επίθετο</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                                 style="display: block">
+                                <input class="mdl-textfield__input" id="emailInput" type="email">
+                                <label class="mdl-textfield__label" for="emailInput">Email Επικοινωνίας</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                                 style="display: block">
+                                <input class="mdl-textfield__input" id="contactReason" type="text">
+                                <label class="mdl-textfield__label" for="contactReason">Λόγος Επικοινωνίας</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <textarea class="mdl-textfield__input" id="textInput" rows="3" type="text"></textarea>
+                                <label class="mdl-textfield__label" for="textInput">Περισσότερα...</label>
+                            </div>
+                            <div>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                                        onclick="uploadToFirebase()"
+                                        type="submit">
+                                    Υποβολή
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="contactInfo" style="margin-right: 50px;margin-left: 0">
+                <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Στοιχειά επικοινωνίας</h2>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <ul class="demo-list-icon mdl-list">
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">mail</i>
+                                    <a href="mailto:kostas21422112@gmail.com">Προσκοπικό Email</a>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">mail</i>
+                                    <a href="mailto:it185255@it.teithe.gr">Ακαδημαϊκό Email </a>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-icon">call</i>
+                                    <a href="tel:+306949392042">Προσκοπικό Τηλέφωνο</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+<script>
+    let firebaseConfig = {
+        apiKey: "AIzaSyAyJt4LTNreEFoLM-5u4Q58Cs6B4wq4Dsw",
+        authDomain: "gti-185255.firebaseapp.com",
+        projectId: "gti-185255",
+        storageBucket: "gti-185255.appspot.com",
+        messagingSenderId: "388787595120",
+        appId: "1:388787595120:web:a0873cd9ad98eb031ed1b5",
+        measurementId: "G-R77VLK46S3"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const Firebase = firebase
+</script>
+</body>
+</html>

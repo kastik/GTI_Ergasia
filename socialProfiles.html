@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="javascript.js" type="application/javascript"></script>
+    <link href="maincss.css" rel="stylesheet">
+    <title>Κοινωνικά Προφίλ</title>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer" id="firstDiv">
+
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Κοινωνικά Προφίλ</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="home.html">Αρχική</a>
+            <a class="mdl-navigation__link" href="projects.html">Projects</a>
+            <a class="mdl-navigation__link" href="contact.html">Επικοινωνία</a>
+            <a class="mdl-navigation__link" href="socialProfiles.html" style="background: #e2e2e2">Κοινωνικά Προφίλ</a>
+            <a class="mdl-navigation__link" href="about.html">Σχετικά με την σελίδα</a>
+        </nav>
+    </div>
+
+    <div id="mobileHeader">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Κοινωνικά Προφίλ</span>
+            <div class="mdl-layout-spacer"></div>
+        </div>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone" onclick="location.href='https://twitter.com/kastik4'"
+                     style="cursor: pointer">
+                    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand" id="twitterProfile"></div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect profileButton">
+                                Twitter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone" onclick="location.href='https://instagram.com/kastik4'"
+                     style="cursor: pointer">
+                    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand" id="InstagramProfile">
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect profileButton">
+                                Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+                    <div class="demo-card-square mdl-card mdl-shadow--2dp" onclick="location.href='https://github.com/kastik'"
+                         style="cursor: pointer">
+                        <div class="mdl-card__title mdl-card--expand" id="githubProfile">
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect profileButton">
+                                Github
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone" onclick="location.href='https://www.youtube.com/user/kostas21422112k'"
+                     style="cursor: pointer">
+                    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand" id="youtubeProfile">
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect profileButton">
+                                Youtube
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+<script>
+    let firebaseConfig = {
+        apiKey: "AIzaSyAyJt4LTNreEFoLM-5u4Q58Cs6B4wq4Dsw",
+        authDomain: "gti-185255.firebaseapp.com",
+        projectId: "gti-185255",
+        storageBucket: "gti-185255.appspot.com",
+        messagingSenderId: "388787595120",
+        appId: "1:388787595120:web:a0873cd9ad98eb031ed1b5",
+        measurementId: "G-R77VLK46S3"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const Firebase = firebase
+</script>
+</body>
+</html>

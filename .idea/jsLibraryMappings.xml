@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{firebase-analytics, firebase-app, firebase-database, firebase-firestore, jquery-3.5.1, material, material.blue-orange, material.indigo-pink}" />
+  </component>
+</project>

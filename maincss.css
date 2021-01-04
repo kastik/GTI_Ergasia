@@ -1,0 +1,106 @@
+.demo-card-wide.mdl-card {
+    width: 350px;
+}
+.demo-card-wide > .mdl-card__menu {
+    color: #fff;
+}
+.demo-list-icon {
+    width: 300px;
+}
+.demo-card-image.mdl-card #profileCard {
+    width: 256px;
+    height: 256px;
+    background: url('images/profilePhoto.jpg') center / cover;
+}
+.demo-card-image > .mdl-card__actions {
+    height: 52px;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.2);
+}
+.projectImg {
+    alignment: center;
+    width: 21%;
+    float: left;
+    margin: 2%;
+}
+.contactForm {
+    margin-right: -4%;
+    margin-left: 4%;
+    width: 60%;
+    display: inline;
+    float: left;
+}
+.contactInfo {
+    display: inline;
+    float: left;
+    width: 20%;
+}
+#mobileHeader {
+    visibility: hidden;
+}
+.mdl-layout__drawer > .mdl-layout__title, .mdl-layout__drawer > .mdl-layout-title {
+    padding-left: 20px;
+}
+.demo-card-square {
+    width: 100%;
+    float: right;
+}
+#twitterProfile {
+    color: #fff;
+    background: url('images/Twitter_Logo_Blue.png') no-repeat center #0a38ac;
+    background-size: 100%;
+}
+#InstagramProfile {
+    color: #fff;
+    background: url('images/Instagram_AppICon_Aug2017.png') no-repeat center #db4de7;
+    background-size: 100%;
+
+}
+#githubProfile {
+    color: #ffffff;
+    background: url('images/GitHub-Mark-120px-plus.png') no-repeat center #ffffff;
+    background-size: 100%;
+}
+.profileButton {
+    text-overflow: ellipsis;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+}
+#youtubeProfile {
+    color: #fff;
+    background: url('images/youtube_social_squircle_white.png') no-repeat center #ffffff;
+    background-size: 100%;
+
+}
+.page-content {
+    margin: 5%;
+}
+@media screen and (max-width: 800px) {
+    .contactForm, .contactInfo {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    .contactForm {
+        margin-top: 30px;
+    }
+    .projectImg {
+        width: 100%;
+        height: auto;
+    }
+    .projectGit {
+        margin: 10%;
+    }
+    .demo-card-wide.mdl-card {
+        width: auto;
+    }
+    #mobileHeader {
+        visibility: visible;
+    }
+}
+
+
+
+
